@@ -8,7 +8,7 @@ function Buttons({music_object}) {
           <Button icon_src='button_icon/settings.png'/>
           <a href = {music_object.youtube_link} target="_blank" ><Button icon_src='button_icon/youtube.png'/></a>
           <a href = {music_object.ncs_link} target="_blank" ><Button icon_src='button_icon/cloud-download.png'/></a>
-          <Button icon_src='button_icon/github.png'/>
+          <a href = "https://github.com/ENTITY514/react-mp3-player" target="_blank" ><Button icon_src='button_icon/github.png'/></a>
           <Button icon_src='button_icon/home.png'/>
         </div>
   );
