@@ -1,0 +1,41 @@
+.button_wrapper{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: auto;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  5px 5px 10px #5a5a5a,
+             -5px -5px 10px #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.button_wrapper:active{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: auto;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  inset 3px 3px 3px #5a5a5a,
+               inset -6px -6px 9px #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.button_wrapper:active .button{
+  height: 23px;
+  width: 23px;
+  margin: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.button{
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

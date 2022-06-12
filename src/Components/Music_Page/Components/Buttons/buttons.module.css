@@ -1,0 +1,11 @@
+.container{
+  width: 70px;
+  height: 100%;
+  margin:auto;
+  margin-right: 0;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+  background: #eeeeee;
+  box-shadow:-15px -15px 40px #ffffff;
+}

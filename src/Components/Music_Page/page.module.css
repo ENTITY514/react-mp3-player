@@ -1,0 +1,20 @@
+.container_one{
+  background: #dedede;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  width: 100vw;
+  height: 100vh;
+  margin:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.container_two{
+  background: #dedede;
+  font-family: 'Nunito', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin:auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr 1fr;
+}
