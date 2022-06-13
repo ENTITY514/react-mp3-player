@@ -1,9 +1,9 @@
 import Page from './page'
 
-function Main_Page() {
+function Main_Page({ playlists }) {
   return (
     <div>
-      <Page />
+      <Page playlists={playlists} />
     </div>
   );
 }
