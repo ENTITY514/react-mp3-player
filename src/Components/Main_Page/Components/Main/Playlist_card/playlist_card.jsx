@@ -10,7 +10,7 @@ function Playlist_card({ name, length, image_source}) {
           <h4 className={style.name}>{name}</h4>
           <h4 className={style.length}>{length}</h4>
         </div>
-        <div className={style.play}><Link to={"/PlayList_" + name}>Play</Link></div>
+        <div className={style.play}><Link className={style.link} to={"/PlayList_" + name}>Play</Link></div>
       </div>
     </div>
   )
