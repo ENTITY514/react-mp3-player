@@ -7,7 +7,7 @@ function App() {
   let playlists = [
     {
       name: "NCS",
-      length: 10,
+      length: 20,
       image_source: "/img/playlist_bg_ncs.jpg",
       music_list: [{ id: 0, name: 'Alex Holmes & Dark Point - You Are [NCS Release]', img: 'img/AlexHolmes&DarkPoint-YouAre[NCSRelease].jpeg', src: 'music/Alex Holmes & Dark Point - You Are [NCS Release].mp3', youtube_link: "https://youtu.be/9qnRTwfIjE4", ncs_link: "http://ncs.io/YouAre" },
       { id: 1, name: 'Amadeus-legendary-goaul5peld', img: 'img/Amadeus-legendary-goaul5peld.jpeg', src: 'music/Amadeus-legendary-goaul5peld.mp3', youtube_link: "https://youtu.be/cTlshvPrIZo", ncs_link: "https://push.fm/fl/ckynq2fc" },

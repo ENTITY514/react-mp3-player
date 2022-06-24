@@ -1,15 +1,4 @@
-.container_one{
-  background: #dedede;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  width: 100vw;
-  height: 100vh;
-  margin:auto;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.container_two{
+.container{
   background: #dedede;
   font-family: 'Nunito', sans-serif;
   width: 100vw;
@@ -17,4 +6,14 @@
   margin:auto;
   display: grid;
   grid-template-columns: 2fr 6fr 1fr;
+}
+
+.button{
+  width: 40px;
+  height: 40px;
+  left: 10px;
+  top: 10px;
+  position: absolute;
+  background-position: center;
+  background-size: contain;
 }

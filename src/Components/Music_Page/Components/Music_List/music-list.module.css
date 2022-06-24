@@ -1,18 +1,14 @@
-.container{
-  width: 100%;
-  max-height: 100vh;
-  overflow-y: scroll;
-  padding: 20px;
-  margin: 0;
-  background: linear-gradient(315deg, #cecece, #ffffff );
-  box-shadow:  15px 15px 42px #8a8a8a,
-         -15px -15px 42px #ffffff;
+.name{
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+  font-size: 150%;
 }
 
-.name{
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 150%;
+
+.wrap{
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .item{
