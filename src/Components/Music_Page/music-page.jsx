@@ -30,6 +30,8 @@ function Music_Page({ music_list }) {
       case "LIST_OPEN":
         set_isListOpen(!isListOpen)
         break;
+      case "CHANGE_CURRENT_TIME":
+        change_current_time(action.value)
     }
   }
 
@@ -96,6 +98,12 @@ function Music_Page({ music_list }) {
 
   const list_open = () => {
     set_isListOpen(!isListOpen)
+  }
+
+  const change_current_time = (value) => {
+    console.log(true)
+    set_currentTime(trackRef.current.duration * value / 100 )
+    trackRef.current.currentTime = trackRef.current.duration * value / 100
   }
 
   return (

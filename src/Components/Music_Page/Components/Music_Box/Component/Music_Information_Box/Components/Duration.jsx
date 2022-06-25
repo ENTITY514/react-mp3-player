@@ -1,11 +1,13 @@
 import style from './duration.module.css';
+import './duration-input-style.css'
+import { useRef, useEffect } from 'react'
 
-function Duration({ currentTime, duration }) {
-  let percent_duration = 0
+function Duration({ dispatch, currentTime, duration }) {
+  let duration_ref = useRef()
 
-  const get_percent_of_duration = (currentTime, duration) => {
-    return (String((currentTime / duration) * 100) + "%")
-  }
+  useEffect(() => {
+    duration_ref.current.value = Math.round((currentTime / duration) * 100)
+  })
 
   const get_duration = (duration) => {
     if (isNaN(duration)) {
@@ -21,15 +23,9 @@ function Duration({ currentTime, duration }) {
     return durati
   }
 
-  percent_duration = get_percent_of_duration(currentTime, duration)
-
   return (
     <div className={style.container}>
-      <div className={style.line}>
-        <div className={style.line_duration} style={{ width: get_percent_of_duration(currentTime, duration) }}></div>
-        <div className={style.point} style={{ marginLeft: percent_duration }}>
-        </div>
-      </div>
+      <input type="range" min="0" max="100" step="1" ref={duration_ref} onChange={(e) => { dispatch({ type: "CHANGE_CURRENT_TIME", value: e.target.value }) }} />
       <div className={style.duration}>{get_duration(duration)}</div>
     </div>
   );
