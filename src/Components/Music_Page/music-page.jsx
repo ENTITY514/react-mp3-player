@@ -32,6 +32,7 @@ function Music_Page({ music_list }) {
         break;
       case "CHANGE_CURRENT_TIME":
         change_current_time(action.value)
+        break;
     }
   }
 
@@ -101,8 +102,7 @@ function Music_Page({ music_list }) {
   }
 
   const change_current_time = (value) => {
-    console.log(true)
-    set_currentTime(trackRef.current.duration * value / 100 )
+    set_currentTime(trackRef.current.duration * value / 100)
     trackRef.current.currentTime = trackRef.current.duration * value / 100
   }
 

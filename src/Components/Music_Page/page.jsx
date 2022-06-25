@@ -11,7 +11,7 @@ function Page({ dispatch, music_play_id, music_object, list_open, music_lists, i
         <Music_List dispatch={dispatch} music_play_id={music_play_id} music_lists={music_lists} isListOpen={isListOpen} />
       </div>
       <Music_Box dispatch={dispatch} music_object={music_object} isPlay={isPlay} currentTime={currentTime} duration={duration} />
-      <Buttons music_object={music_object} />
+      <Buttons dispatch={dispatch} music_object={music_object} />
     </div>
   );
 }
