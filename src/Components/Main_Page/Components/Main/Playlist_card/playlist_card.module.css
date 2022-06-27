@@ -2,10 +2,12 @@
   width: 250px;
   height: 350px;
   margin: auto;
-  padding: 15px;
   display: grid;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
-  grid-template-rows: 8fr 2fr;
+  grid-template-rows: 8fr 3fr;
   background: linear-gradient(315deg, #cecece, #ffffff );
   border-radius: 30px;
   box-shadow:  15px 15px 42px #8a8a8a,
@@ -38,17 +40,17 @@
 
 .play{
   width: 100px;
-  height: 30px;
   border-radius: 15px;
-  border: 1px solid black;
   line-height: 30px;
+  margin-bottom: 10px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  5px 5px 10px #5a5a5a,
+             -5px -5px 10px #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
   text-align: center;
   transition: 0.5s;
-}
-
-.play:hover{
-  background: black;
-  color: white;
+  margin: auto;
 }
 
 .link{
