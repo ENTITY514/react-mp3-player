@@ -1,13 +1,24 @@
-.name{
-  height: 10vh;
-  line-height: 10vh;
-  text-align: center;
-  font-size: 150%;
+.container{
+  width: 300px;
+  height: 550px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  background: linear-gradient(315deg, #cecece, #ffffff );
+  border-radius: 30px;
+  box-shadow:  15px 15px 42px #8a8a8a,
+         -15px -15px 42px #ffffff;
 }
 
+.name{
+  text-align: center;
+  margin: 10px;
+}
 
 .wrap{
-  max-height: 90vh;
   overflow-y: auto;
 }
 

@@ -6,7 +6,7 @@ function Music_Page({ music_list }) {
 
   let [music_play_id, set_music_play_id] = useState(0)
   let [isPlay, set_isPlay] = useState(false)
-  let [isListOpen, set_isListOpen] = useState(true)
+  let [toggle, set_toggle] = useState(false)
   let [currentTime, set_currentTime] = useState(0)
   let [duration, set_duration] = useState()
 
@@ -27,11 +27,11 @@ function Music_Page({ music_list }) {
       case "CLICK_PLAY":
         click_play()
         break;
-      case "LIST_OPEN":
-        set_isListOpen(!isListOpen)
-        break;
       case "CHANGE_CURRENT_TIME":
         change_current_time(action.value)
+        break;
+      case "CHANGE_TOGGLE":
+        set_toggle((prev) => !prev)
         break;
     }
   }
@@ -97,10 +97,6 @@ function Music_Page({ music_list }) {
     trackRef.current.play()
   }
 
-  const list_open = () => {
-    set_isListOpen(!isListOpen)
-  }
-
   const change_current_time = (value) => {
     set_currentTime(trackRef.current.duration * value / 100)
     trackRef.current.currentTime = trackRef.current.duration * value / 100
@@ -109,7 +105,7 @@ function Music_Page({ music_list }) {
   return (
     <div>
       <audio ref={trackRef} id="track" src={music_list[music_play_id].src}></audio>
-      <Page dispatch={dispatch} music_lists={music_list} music_play_id={music_play_id} list_open={list_open} isListOpen={isListOpen} isPlay={isPlay} click_play={click_play} click_pause={click_pause} right_click={right_click} left_click={left_click} music_object={music_list[music_play_id]} currentTime={currentTime} duration={duration} />
+      <Page dispatch={dispatch} music_lists={music_list} music_play_id={music_play_id} toggle={toggle} isPlay={isPlay} click_play={click_play} click_pause={click_pause} right_click={right_click} left_click={left_click} music_object={music_list[music_play_id]} currentTime={currentTime} duration={duration} />
     </div>
   );
 }

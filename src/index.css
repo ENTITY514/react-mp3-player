@@ -1,4 +1,5 @@
 *{
+  overflow-y: hidden;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -9,6 +10,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+::-webkit-scrollbar {
+  border-radius: 2px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: #aeaeae;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #555555;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

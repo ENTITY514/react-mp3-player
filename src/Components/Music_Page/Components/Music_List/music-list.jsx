@@ -1,8 +1,6 @@
 import style from './music-list.module.css';
-import { CSSTransition } from 'react-transition-group'
-import './container.css'
 
-function Music_List({ dispatch, music_lists, music_play_id, isListOpen }) {
+function Music_List({ dispatch, music_lists, music_play_id }) {
   const music_list = music_lists.map((item) => {
     if (music_play_id == item.id) {
       return (
@@ -17,14 +15,12 @@ function Music_List({ dispatch, music_lists, music_play_id, isListOpen }) {
   });
 
   return (
-    <CSSTransition in={isListOpen} timeout={500} classNames={"container_music_list"}>
-      <div className="container_music_list">
-        <div className={style.name}>Playlist</div>
+      <div className={style.container}>
+        <h2 className={style.name}>Playlist</h2>
         <div className={style.wrap}>
           {music_list}
         </div>
       </div>
-    </CSSTransition>
   );
 }
 
