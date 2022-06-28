@@ -2,17 +2,33 @@ import style from './buttons.module.css';
 import Button from './Button/button'
 import { Link } from "react-router-dom"
 
-function Buttons({ dispatch, music_object }) {
+function Info({ dispatch, music_object }) {
   return (
     <div className={style.container}>
-      <Link to={"/"}><Button icon_src='button_icon/arrow-left.png' isRotate={true} /></Link>
-      <Button action={() => { dispatch({ type: "CHANGE_SETTINGS_STATE" }) }} icon_src='button_icon/settings.png' />
-      <a href={music_object.youtube_link} target="_blank" ><Button icon_src='button_icon/youtube.png' /></a>
-      <a href={music_object.ncs_link} target="_blank" ><Button icon_src='button_icon/cloud-download.png' /></a>
-      <a href="https://github.com/ENTITY514/react-mp3-player" target="_blank" ><Button icon_src='button_icon/github.png' /></a>
-      <Button icon_src='button_icon/home.png' />
+
+      <h2 className={style.header}>Info and links</h2>
+
+      <div className={style.links}>
+        <div className={style.links_line}>
+          <Link to={"/"}><Button icon_src='button_icon/arrow-left.png' isRotate={true} /></Link>
+          <div className={style.description}>Back to choice a playlist</div>
+        </div>
+        <div className={style.links_line}>
+          <a href={music_object.youtube_link} target="_blank" ><Button icon_src='button_icon/youtube.png' /></a>
+          <div className={style.description}>Youtube links</div>
+        </div>
+        <div className={style.links_line}>
+          <a href={music_object.ncs_link} target="_blank" ><Button icon_src='button_icon/cloud-download.png' /></a>
+          <div className={style.description}>Download from cloud</div>
+        </div>
+        <div className={style.links_line}>
+          <a href="https://github.com/ENTITY514/react-mp3-player" target="_blank" ><Button icon_src='button_icon/github.png' /></a>
+          <div className={style.description}>Github</div>
+        </div>
+      </div>
+      
     </div>
   );
 }
 
-export default Buttons;
+export default Info;

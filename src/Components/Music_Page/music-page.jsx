@@ -6,7 +6,7 @@ function Music_Page({ music_list }) {
 
   let [music_play_id, set_music_play_id] = useState(0)
   let [isPlay, set_isPlay] = useState(false)
-  let [toggle, set_toggle] = useState(false)
+  let [toggle, set_toggle] = useState("PLAY")
   let [currentTime, set_currentTime] = useState(0)
   let [duration, set_duration] = useState()
 
@@ -31,7 +31,7 @@ function Music_Page({ music_list }) {
         change_current_time(action.value)
         break;
       case "CHANGE_TOGGLE":
-        set_toggle((prev) => !prev)
+        set_toggle(action.value)
         break;
     }
   }

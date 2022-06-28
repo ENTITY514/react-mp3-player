@@ -1,11 +1,32 @@
 .container{
-  width: 70px;
-  height: 100%;
-  margin:auto;
-  margin-right: 0;
+  width: 300px;
+  height: 550px;
+  margin: auto;
+  margin-top: 50px;
   display: grid;
-  text-align: center;
+  padding: 20px;
   grid-template-columns: 1fr;
-  background: #eeeeee;
-  box-shadow:-15px -15px 40px #ffffff;
+  background: linear-gradient(315deg, #cecece, #ffffff );
+  border-radius: 30px;
+  box-shadow:  15px 15px 42px #8a8a8a,
+         -15px -15px 42px #ffffff;
+}
+
+.header{
+  height: 50px;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.links_line{
+  height: 70px;
+  line-height: 70px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.description{
+  padding-left: 10px;
 }

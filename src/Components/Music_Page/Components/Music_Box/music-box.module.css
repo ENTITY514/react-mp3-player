@@ -31,18 +31,3 @@
   display: grid;
   grid-template-rows: 1fr 8fr 6fr;
 }
-
-@media (max-width: 200px){
-  .container{
-    width: 380px;
-    height: 100vh;
-    margin: auto;
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    background: linear-gradient(315deg, #cecece, #ffffff );
-    border-radius: 30px;
-    box-shadow:  15px 15px 42px #8a8a8a,
-           -15px -15px 42px #ffffff;
-  }
-}
