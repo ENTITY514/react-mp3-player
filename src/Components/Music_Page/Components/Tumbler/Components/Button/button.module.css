@@ -1,64 +1,16 @@
 .button_wrapper{
-  width: 50px;
-  height: 50px;
-  margin: 20px;
-  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
   display: inline-block;
   position: relative;
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow:  5px 5px 10px #5a5a5a,
-             -3px -3px 6px #ffffff;
+  filter: invert();
+  cursor: pointer;
 }
-
-.button_wrapper:active{
-  background: linear-gradient(145deg, #cacaca, #dedede);
-  box-shadow:  inset 3px 3px 3px #5a5a5a,
-               inset -6px -6px 9px #ffffff;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.button_wrapper:active .button{
-  height: 28px;
-  width: 28px;
-  margin: 11px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
 
 .button{
   width: 30px;
   height: 30px;
-  margin: 10px;
   background-size: contain;
   background-position: center;
-}
-
-@media screen and (max-device-height: 800px) {
-  .container{
-    position: fixed;
-    bottom: 0px;
-  }
-  .button_wrapper{
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-  }
-  .button{
-    width: 22px;
-    height: 22px;
-    margin: 4px;
-    background-size: contain;
-    background-position: center;
-  }
-  .button_wrapper:active .button{
-    height: 20px;
-    width: 20px;
-    margin: 5px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
 }

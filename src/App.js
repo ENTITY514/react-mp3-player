@@ -53,12 +53,14 @@ function App() {
       { id: 6, name: 'eddie-still-healing', img: 'img/cyberpunkSeven.jpg', src: 'music/eddie-still-healing.mp3', youtube_link: "https://youtu.be/QtCbgadN3Rc", ncs_link: "https://smarturl.it/bad_habits" }]
     },
   ]
+
   let routes = playlists.map((playlist) => {
     let path = "/PlayList_" + playlist.name
     return (
       <Route key={Math.random().toString().substring(2, 9)}  path={path} element={<Music_Page music_list={playlist.music_list} />} />
     )
   })
+  
   return (
     <BrowserRouter>
       <div className="App">

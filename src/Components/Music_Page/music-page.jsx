@@ -49,33 +49,29 @@ function Music_Page({ music_list }) {
       set_music_play_id((prev) => prev - 1 + 2)
       trackRef.current.src = music_list[music_play_id].src
       trackRef.current.currentTime = 0
-      if (isPlay) {
-        setTimeout(function() { trackRef.current.play(); }, 100);
-      }
-      setTimeout(function() {
+      trackRef.current.addEventListener('loadeddata', function() {
+        if (isPlay) {
+          trackRef.current.play();
+        }
         set_duration(trackRef.current.duration);
         set_currentTime(trackRef.current.currentTime);
-      }, 100);
-    }
-    else {
-      return
+      }, false);
     }
   }
+
+
   const left_click = () => {
     if (music_play_id - 1 >= 0) {
       set_music_play_id((prev) => prev - 1)
       trackRef.current.src = music_list[music_play_id].src
       trackRef.current.currentTime = 0
-      if (isPlay) {
-        setTimeout(function() { trackRef.current.play(); }, 100);
-      }
-      setTimeout(function() {
+      trackRef.current.addEventListener('loadeddata', function() {
+        if (isPlay) {
+          trackRef.current.play();
+        }
         set_duration(trackRef.current.duration);
         set_currentTime(trackRef.current.currentTime);
-      }, 100);
-    }
-    else {
-      return
+      }, false);
     }
   }
 
@@ -83,15 +79,20 @@ function Music_Page({ music_list }) {
     set_music_play_id(id)
     trackRef.current.src = music_list[music_play_id].src;
     trackRef.current.currentTime = 0;
-    if (isPlay) {
-      setTimeout(function() { trackRef.current.play(); }, 100);
-    }
-    setTimeout(function() { set_duration(trackRef.current.duration); }, 100);
+    trackRef.current.addEventListener('loadeddata', function() {
+      if (isPlay) {
+        trackRef.current.play();
+      }
+      set_duration(trackRef.current.duration);
+      set_currentTime(trackRef.current.currentTime);
+   }, false);
   }
+
   const click_pause = () => {
     set_isPlay(false)
     trackRef.current.pause()
   }
+
   const click_play = () => {
     set_isPlay(true)
     trackRef.current.play()
@@ -107,7 +108,7 @@ function Music_Page({ music_list }) {
       <audio ref={trackRef} id="track" src={music_list[music_play_id].src}></audio>
       <Page dispatch={dispatch} music_lists={music_list} music_play_id={music_play_id} toggle={toggle} isPlay={isPlay} click_play={click_play} click_pause={click_pause} right_click={right_click} left_click={left_click} music_object={music_list[music_play_id]} currentTime={currentTime} duration={duration} />
     </div>
-  );
+  )
 }
 
 export default Music_Page;
