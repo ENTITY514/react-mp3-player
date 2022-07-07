@@ -39,53 +39,40 @@ function Music_Page({ music_list }) {
   useEffect(() => {
     setTimeout(() => {
       set_currentTime(trackRef.current.currentTime)
-      if (trackRef.current.duration == trackRef.current.currentTime) { right_click() }
     }, 300)
-    set_duration(trackRef.current.duration)
   })
 
-  const right_click = () => {
-    if (music_play_id - 1 + 2 < music_list.length) {
-      set_music_play_id((prev) => prev - 1 + 2)
-      trackRef.current.src = music_list[music_play_id].src
-      trackRef.current.currentTime = 0
-      trackRef.current.addEventListener('loadeddata', function() {
-        if (isPlay) {
-          trackRef.current.play();
-        }
-        set_duration(trackRef.current.duration);
-        set_currentTime(trackRef.current.currentTime);
-      }, false);
-    }
-  }
 
-
-  const left_click = () => {
-    if (music_play_id - 1 >= 0) {
-      set_music_play_id((prev) => prev - 1)
-      trackRef.current.src = music_list[music_play_id].src
-      trackRef.current.currentTime = 0
-      trackRef.current.addEventListener('loadeddata', function() {
-        if (isPlay) {
-          trackRef.current.play();
-        }
-        set_duration(trackRef.current.duration);
-        set_currentTime(trackRef.current.currentTime);
-      }, false);
-    }
-  }
-
-  const list_item_click = (id) => {
-    set_music_play_id(id)
-    trackRef.current.src = music_list[music_play_id].src;
-    trackRef.current.currentTime = 0;
+  const update_ref = () => {
+    trackRef.current.src = music_list[music_play_id].src
+    trackRef.current.currentTime = 0
     trackRef.current.addEventListener('loadeddata', function() {
       if (isPlay) {
         trackRef.current.play();
       }
       set_duration(trackRef.current.duration);
       set_currentTime(trackRef.current.currentTime);
-   }, false);
+    }, false);
+  }
+
+  const right_click = () => {
+    if (Number(music_play_id) < music_list.length - 1) {
+      set_music_play_id((prev) => Number(prev) + 1)
+      update_ref();
+    }
+  }
+
+
+  const left_click = () => {
+    if (music_play_id > 0) {
+      set_music_play_id((prev) => prev - 1)
+      update_ref();
+    }
+  }
+
+  const list_item_click = (id) => {
+    set_music_play_id(id)
+    update_ref();
   }
 
   const click_pause = () => {

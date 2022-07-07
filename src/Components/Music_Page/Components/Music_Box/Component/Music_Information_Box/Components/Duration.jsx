@@ -14,18 +14,18 @@ function Duration({ dispatch, currentTime, duration }) {
       return
     }
     let int_duration = Math.trunc(duration)
-    let minut = Math.trunc(int_duration / 60)
-    let second = int_duration - 60 * minut
-    if (second < 10) {
-      second = "0" + (int_duration - 60 * minut)
+    let minutes = Math.trunc(int_duration / 60)
+    let seconds = int_duration - 60 * minutes
+    if (seconds < 10) {
+      seconds = "0" + (int_duration - 60 * minutes)
     }
-    let durati = String(minut + ":" + second)
-    return durati
+    let new_duration = String(minutes + ":" + seconds)
+    return new_duration
   }
 
   return (
     <div className={style.container}>
-      <input type="range" min="0" max="100" step="1" ref={duration_ref} onChange={(e) => { dispatch({ type: "CHANGE_CURRENT_TIME", value: e.target.value }) }} />
+      <input type="range" min="0" max="100" step="1" defaultValue="1" ref={duration_ref} onChange={(e) => { dispatch({ type: "CHANGE_CURRENT_TIME", value: e.target.value }) }} />
       <div className={style.duration}>{get_duration(duration)}</div>
     </div>
   );

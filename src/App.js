@@ -45,12 +45,12 @@ function App() {
       length: 7,
       image_source: "/img/playlist_bg_cyberpunk.jpg",
       music_list: [{ id: 0, name: 'the-encounter-astrid-feat-street-cleaner', img: 'img/cyberpunkOne.jpg', src: 'music/the-encounter-astrid-feat-street-cleaner.mp3', youtube_link: "https://youtu.be/OI4P7Q0jqCI", ncs_link: "https://goo.gl/2a6izf" },
-      { id: 1, name: 'social-kid-transmissions-432hz-electro', img: 'img/cyberpunkTwo.jpg', src: 'music/social-kid-transmissions-432hz-electro.mp3', youtube_link: "https://youtu.be/r15foxRS1gM", ncs_link: "https://soundcloud.com/socialkidmusic" },
-      { id: 2, name: 'owl-vision-warhogz', img: 'img/cyberpunkThree.jpg', src: 'music/owl-vision-warhogz.mp3', youtube_link: "https://youtu.be/AdqGAJsFNGM", ncs_link: "https://soundcloud.com/owlvision/warhogz" },
-      { id: 3, name: 'max-brhon-the-future-ncs-release', img: 'img/cyberpunkFour.jpg', src: 'music/max-brhon-the-future-ncs-release.mp3', youtube_link: "https://youtu.be/dRe_rS19E04", ncs_link: "http://ncs.io/TheFuture " },
-      { id: 4, name: 'max-brhon-cyberpunk-ncs-release', img: 'img/cyberpunkFive.jpg', src: 'music/max-brhon-cyberpunk-ncs-release.mp3', youtube_link: "https://youtu.be/iqoNoU-rm14", ncs_link: " http://ncs.io/Cyberpunk" },
-      { id: 5, name: 'hyper-clockwork', img: 'img/cyberpunkSix.jpg', src: 'music/hyper-clockwork.mp3', youtube_link: "https://youtu.be/Pt7kmByAPxI", ncs_link: "https://www.soundcloud.com/hyper" },
-      { id: 6, name: 'eddie-still-healing', img: 'img/cyberpunkSeven.jpg', src: 'music/eddie-still-healing.mp3', youtube_link: "https://youtu.be/QtCbgadN3Rc", ncs_link: "https://smarturl.it/bad_habits" }]
+      { id: 1, name: 'Social kid - Transmissions', img: 'img/cyberpunkTwo.jpg', src: 'music/social-kid-transmissions-432hz-electro.mp3', youtube_link: "https://youtu.be/r15foxRS1gM", ncs_link: "https://soundcloud.com/socialkidmusic" },
+      { id: 2, name: 'Owl Vision - Warhogz', img: 'img/cyberpunkThree.jpg', src: 'music/owl-vision-warhogz.mp3', youtube_link: "https://youtu.be/AdqGAJsFNGM", ncs_link: "https://soundcloud.com/owlvision/warhogz" },
+      { id: 3, name: 'Max Brhon - The future', img: 'img/cyberpunkFour.jpg', src: 'music/max-brhon-the-future-ncs-release.mp3', youtube_link: "https://youtu.be/dRe_rS19E04", ncs_link: "http://ncs.io/TheFuture " },
+      { id: 4, name: 'Max Brhon - Cyberpunk', img: 'img/cyberpunkFive.jpg', src: 'music/max-brhon-cyberpunk-ncs-release.mp3', youtube_link: "https://youtu.be/iqoNoU-rm14", ncs_link: " http://ncs.io/Cyberpunk" },
+      { id: 5, name: 'Hyper - Clockwork', img: 'img/cyberpunkSix.jpg', src: 'music/hyper-clockwork.mp3', youtube_link: "https://youtu.be/Pt7kmByAPxI", ncs_link: "https://www.soundcloud.com/hyper" },
+      { id: 6, name: 'Eddie Still - Healing', img: 'img/cyberpunkSeven.jpg', src: 'music/eddie-still-healing.mp3', youtube_link: "https://youtu.be/QtCbgadN3Rc", ncs_link: "https://smarturl.it/bad_habits" }]
     },
   ]
 
@@ -60,7 +60,7 @@ function App() {
       <Route key={Math.random().toString().substring(2, 9)}  path={path} element={<Music_Page music_list={playlist.music_list} />} />
     )
   })
-  
+
   return (
     <BrowserRouter>
       <div className="App">
